@@ -1,0 +1,12 @@
+// package.json
+{
+  "name": "minecraft-server-manager",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^latest"
+  }
+}
