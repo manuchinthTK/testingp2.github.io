@@ -3,24 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Server Manager</title>
+    <title>Minecraft Server Downloader</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .button { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; }
-        .button:disabled { background: #cccccc; }
-        #console { background: #000; color: #0f0; padding: 10px; height: 300px; overflow-y: auto; }
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #2ea44f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #22863a;
+        }
+        .file-list {
+            background: #f6f8fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .instructions {
+            background: #fff8e6;
+            padding: 15px;
+            border-left: 4px solid #ffd33d;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>Minecraft 1.21.5 Server Manager</h1>
+    <h1>Minecraft 1.21.5 Server Download</h1>
     
-    <button id="downloadBtn" class="button">Download Server</button>
-    <button id="runBtn" class="button" disabled>Run Server</button>
-    <button id="stopBtn" class="button" disabled>Stop Server</button>
+    <div class="file-list">
+        <h2>Server Files</h2>
+        <p>Download these files to run your own server:</p>
+        
+        <!-- Direct links to raw GitHub files -->
+        <a href="https://github.com/manuchinthTK/testingp2.github.io/raw/main/server.jar" class="button">
+            Download server.jar
+        </a><br>
+        
+        <a href="https://github.com/manuchinthTK/testingp2.github.io/raw/main/eula.txt" class="button">
+            Download eula.txt
+        </a><br>
+        
+        <a href="https://github.com/manuchinthTK/testingp2.github.io/raw/main/start.bat" class="button">
+            Download Windows start.bat
+        </a><br>
+        
+        <a href="https://github.com/manuchinthTK/testingp2.github.io/raw/main/start.sh" class="button">
+            Download Linux/macOS start.sh
+        </a>
+    </div>
     
-    <h2>Server Console</h2>
-    <div id="console"></div>
+    <div class="instructions">
+        <h2>Installation Instructions</h2>
+        <ol>
+            <li>Download all files above</li>
+            <li>Place them in the same folder</li>
+            <li>For Windows: Double-click <code>start.bat</code></li>
+            <li>For Linux/macOS: Run <code>chmod +x start.sh</code> then <code>./start.sh</code></li>
+            <li>The server will generate files on first run</li>
+        </ol>
+    </div>
     
-    <script src="app.js"></script>
+    <h2>Alternative: Download All Files as ZIP</h2>
+    <a href="https://github.com/manuchinthTK/testingp2.github.io/archive/main.zip" class="button">
+        Download Complete Server Package
+    </a>
 </body>
 </html>
